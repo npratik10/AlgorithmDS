@@ -37,5 +37,5 @@ void LinkList::printList()
 {
    LinkList::node *tmp;
    for (tmp = root; tmp != NULL; tmp = tmp->next)
-      std::cout << "Value :" << tmp->data << std::endl;
+      std::cout << "Value :" << tmp->getData() << std::endl;
 }

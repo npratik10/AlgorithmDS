@@ -7,9 +7,10 @@ class LinkList
     // Node Class
     class node
     {
-       public:
+       private:
 	  // Value
           int data;
+       public:
 	  // Pointer
           node *next;
           //ctor
@@ -20,10 +21,11 @@ class LinkList
           }
 	  //dtor
           ~node() {}
+	  // Get Data Attribute function
+	  int getData() {return data;}
     };
 
-    public:
-    
+    private:
     // Head Node
     node *root;
 
