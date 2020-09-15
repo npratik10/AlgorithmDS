@@ -3,5 +3,6 @@
 
 class mergesort
 {
-
-}
+    mergesort();
+    ~mergesort();
+};
