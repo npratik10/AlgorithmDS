@@ -7,9 +7,15 @@ LinkList::LinkList(int val)
 
 LinkList::~LinkList()
 {
-   //LinkList::node *tmp;
-   //for (tmp = root; tmp != NULL; tmp = tmp->next)
-      //delete tmp;
+   LinkList::node *tmp = root;
+   LinkList::node *prev = nullptr;
+   while (tmp != NULL)
+   {
+       prev = tmp;
+       tmp = tmp->next;
+       delete prev;
+   }
+   delete tmp;
 }
 
 LinkList::node *LinkList::createNode(int val)
