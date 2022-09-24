@@ -2,6 +2,12 @@
 
 #include "includes.h"
 
+/*-----------------
+ Executable:
+ nqueens n_queen_solver; 
+ n_queen_solver.solveNQueens(4);
+-------------------*/
+
 class nqueens
 {
 public:
