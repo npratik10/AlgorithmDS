@@ -6,6 +6,29 @@
 #include <vector>
 #include <functional>
 
+/*
+Example of getting a function ptr from an API
+std::function<bool(cacheline_tracker_entry&)> l2_module::get_process_state(cacheline_tracker_entry& entry)
+{
+    if (entry.is_read_flow_type())
+    {
+        return [this](cacheline_tracker_entry& entry) { return this->process_read_state(entry); };
+    }
+    else if (entry.is_write_flow_type())
+    {
+        return [this](cacheline_tracker_entry& entry) { return this->process_write_state(entry); };
+    }
+    else
+    {
+        CB_CHECK(false) << "Unsupported flow type";
+    }
+
+    return nullptr;
+}
+
+std::function<bool(cacheline_tracker_entry&)> process_state = get_process_state(entry);
+*/
+
 #define USE_LIST
 
 class parent
